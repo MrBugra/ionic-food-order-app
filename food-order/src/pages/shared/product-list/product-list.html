@@ -1,0 +1,33 @@
+<!--
+  Generated template for the ProductListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Ürünler</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  
+  <ion-content >
+    <h2 padding style="text-align:center">İndirimlerimizi Takip Edin</h2>
+    <ion-list padding>
+      <ion-item *ngFor="let p of products">
+    <div class="container" (click)="showProduct(p.id)">
+      <img padding src="{{p.Url}}"  >
+      <div class="content">
+        <h1>{{p.Name}}</h1>
+        <p *ngIf="p.DiscountedPrice>0" style="text-decoration:line-through;">{{p.Price}}</p> 
+        <p *ngIf="p.DiscountedPrice>0" >{{p.DiscountedPrice}}</p> 
+        <p *ngIf="p.DiscountedPrice==0" >{{p.Price}}</p>
+
+      </div>
+    </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>

@@ -1,0 +1,62 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button color="dark" (click)="navLogin()">
+      <ion-icon name="md-arrow-round-back"></ion-icon>
+    </button>
+    <ion-title>Geri</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-grid>
+        <ion-row >  
+            <img style="height: 30vh;
+            width: auto;
+            margin: auto;
+            display: block;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKVYZiOwjxbGDMX1KqJC6ATm9rpsPWNs9svBV9FzmnYqc2xyINLw">
+       </ion-row>
+    <ion-row>
+      <ion-col >
+    
+  <ion-item>
+    <ion-label floating>E-Mail</ion-label>
+    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+  <span ion-text color="danger" *ngIf="true">email boş geçilemez</span>
+
+  <ion-item>
+    <ion-label floating>Username</ion-label>
+    <ion-input type="text" [(ngModel)]="user.nickName"></ion-input>
+  </ion-item>
+  <span ion-text color="danger" *ngIf="true">Username boş geçilemez</span>
+
+  <ion-item>
+    <ion-label floating>Mobile Phone</ion-label>
+    <ion-input type="number" [(ngModel)]="user.gsm"></ion-input>
+  </ion-item>
+  <span ion-text color="danger" *ngIf="true">gsm boş geçilemez</span>
+
+
+  <ion-item>
+    <ion-label >Password</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+  <span ion-text color="danger" *ngIf="true">şifre boş geçilemez</span>
+
+  <br>
+<br>
+
+<button ion-button color="danger" round full (click)="Register()">Kaydol</button>
+
+</ion-col></ion-row></ion-grid>
+
+</ion-list>
+</ion-content>

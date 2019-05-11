@@ -1,0 +1,68 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+
+    <ion-title>Giriş</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-grid>
+  <ion-row >  
+       <img style="height: 30vh;
+       width: auto;
+       margin: auto;
+       display: block;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKVYZiOwjxbGDMX1KqJC6ATm9rpsPWNs9svBV9FzmnYqc2xyINLw">
+  </ion-row>
+    <ion-row>
+      <ion-col offset-2 col-8>
+    
+  <ion-item>
+    <ion-label floating>E-Mail</ion-label>
+    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+  <span ion-text color="danger" *ngIf="true">email boş geçilemez</span>
+<!-- 
+  <ion-item>
+    <ion-label floating>Username</ion-label>
+    <ion-input type="text" [(ngModel)]="user.nickName"></ion-input>
+  </ion-item>
+  <span ion-text color="danger" *ngIf="true">Username boş geçilemez</span>
+
+  <ion-item>
+    <ion-label floating>Mobile Phone</ion-label>
+    <ion-input type="number" [(ngModel)]="user.gsm"></ion-input>
+  </ion-item>
+  <span ion-text color="danger" *ngIf="true">gsm boş geçilemez</span> -->
+
+
+  <ion-item>
+    <ion-label >Password</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+  <span ion-text color="danger" *ngIf="true">şifre boş geçilemez</span>
+
+  <br>
+<br>
+
+<button ion-button color="primary" round full (click)="Login()">Giriş</button>
+
+<button ion-button icon-start color="dark" small (click)="navRegister()">
+  <ion-icon name="md-person-add" ></ion-icon>
+  Kayıt Ol
+</button>
+
+<button ion-button icon-end small color="danger" (click)="forgotPassword()">
+  <ion-icon name="md-hand">
+    Şifremi Unuttum
+  </ion-icon>
+</button>
+</ion-col></ion-row></ion-grid>
+</ion-list>
+</ion-content>

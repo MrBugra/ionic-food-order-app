@@ -1,0 +1,30 @@
+<!--
+  Generated template for the CategoriesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Kategoriler</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content >
+  <h2 padding style="text-align:center">Responsive Image with Transparent Text</h2>
+  <ion-list padding>
+    <ion-item *ngFor="let c of categories">
+  <div class="container" (click)="showProduct(c.categoryId)">
+    <img src="{{c.Url}}" alt="Notebook" >
+    <div class="content">
+      <h1>{{c.description}}</h1>
+      <!-- <p>Nefis pidelerimiz şu an  çok ucuz</p> -->
+    </div>
+  </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
